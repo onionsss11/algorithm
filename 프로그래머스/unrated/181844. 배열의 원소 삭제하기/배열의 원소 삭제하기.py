@@ -1,6 +1,10 @@
 def solution(arr, delete_list):
     
-    return [x for x in arr if x not in delete_list]
+    for i in delete_list:
+        if i in arr:
+            arr.remove(i)
+            
+    return arr
 
         
     
