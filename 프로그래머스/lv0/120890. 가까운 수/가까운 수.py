@@ -1,13 +1,12 @@
 def solution(array, n):
-    
-    closest_num = None
-    min_diff = float('inf')  # 무한대로 초기화
 
+    closeNum = None
+    minimum = float('inf')
     array.sort()
-    for num in array:
-        diff = abs(num - n)
-        if diff < min_diff:
-            min_diff = diff
-            closest_num = num
-
-    return closest_num
+    for i in array:
+        diff = abs(i-n)
+        if diff < minimum:
+            minimum = diff
+            closeNum = i
+            
+    return closeNum
